@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Globe, Users, Award, BookOpen, MapPin, Star, ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-students.jpg";
 import malaysiaSyudyGuide from "@/assets/malaysia-study-guide.png";
+import malaysiaGuidePreview from "@/assets/malaysia-guide-preview.png";
 import BookConsultationForm from "@/components/BookConsultationForm";
 
 const Home = () => {
@@ -213,6 +214,13 @@ const Home = () => {
             <p className="text-xl max-w-2xl mx-auto mb-8">
               Join thousands of students who have achieved their academic dreams with our expert guidance.
             </p>
+            <div className="max-w-4xl mx-auto mb-8">
+              <img 
+                src={malaysiaGuidePreview} 
+                alt="Complete Guide to Studying in Malaysia 2025/26" 
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-500 hover:bg-gray-100 font-semibold shadow-lg border-2 border-white" asChild>
                 <Link to="/consultation">
