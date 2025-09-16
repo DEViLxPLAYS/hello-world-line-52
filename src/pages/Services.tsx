@@ -280,14 +280,14 @@ const Services = () => {
             Book a free consultation with our experts and take the first step towards your international education.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-accent hover:bg-accent-light text-white" asChild>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white" asChild>
               <Link to="/consultation">
                 Book Free Consultation
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
               <Phone className="mr-2 h-4 w-4" />
-              Call Now: +1 (555) 123-4567
+              Call Now: +60 18-284 8310
             </Button>
           </div>
         </div>

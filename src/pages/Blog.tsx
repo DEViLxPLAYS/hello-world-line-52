@@ -153,7 +153,7 @@ const Blog = () => {
               <img 
                 src={malaysiaGuideHero}
                 alt="Complete Guide to Studying in Malaysia" 
-                className="w-full h-full object-cover"
+                className="w-1/2 h-auto object-cover mx-auto"
               />
             </div>
             <div className="p-8">
