@@ -24,7 +24,6 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex items-center space-x-2">
           <GraduationCap className="h-8 w-8 text-primary" />
-          <span className="text-xl font-bold text-foreground">FutureAceConsultancy</span>
         </Link>
 
         {/* Desktop Navigation */}
