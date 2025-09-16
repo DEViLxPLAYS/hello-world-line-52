@@ -9,6 +9,7 @@ import { Search, Calendar, User, ArrowRight, Eye, Filter } from "lucide-react";
 import ArticleModal from "@/components/ArticleModal";
 import UniversityModal from "@/components/UniversityModal";
 import ScholarshipModal from "@/components/ScholarshipModal";
+import malaysiaGuideHero from "@/assets/malaysia-guide-hero.png";
 
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -148,8 +149,12 @@ const Blog = () => {
         {/* Featured Post */}
         <Card className="border-none shadow-lg mb-12 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="bg-gradient-hero flex items-center justify-center p-12">
-              <span className="text-8xl">{featuredPost.image}</span>
+            <div className="bg-white flex items-center justify-center p-0">
+              <img 
+                src={malaysiaGuideHero}
+                alt="Complete Guide to Studying in Malaysia" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="p-8">
               <Badge className="mb-4">{featuredPost.category}</Badge>
