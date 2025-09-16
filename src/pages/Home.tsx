@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Globe, Users, Award, BookOpen, MapPin, Star, ArrowRight, Calendar, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-students.jpg";
+import malaysiaSyudyGuide from "@/assets/malaysia-study-guide.png";
 import BookConsultationForm from "@/components/BookConsultationForm";
 
 const Home = () => {
@@ -121,9 +122,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Popular Destinations */}
+      {/* Study Destinations Guide */}
       <section className="py-16 lg:py-24">
         <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Study Destinations</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Complete Guide to Studying in Malaysia 2025/26
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto mb-16">
+            <img 
+              src={malaysiaSyudyGuide} 
+              alt="Complete Guide to Studying in Malaysia 2025/26" 
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Popular Study Destinations</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -191,6 +205,32 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Ready to Start Your Journey Section */}
+      <section className="py-16 lg:py-24 bg-blue-500 text-white">
+        <div className="container px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
+            <p className="text-xl max-w-2xl mx-auto mb-8">
+              Join thousands of students who have achieved their academic dreams with our expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-500 hover:bg-gray-100 font-semibold shadow-lg border-2 border-white" asChild>
+                <Link to="/consultation">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Book Free Consultation
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-500 font-semibold" asChild>
+                <Link to="/contact">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Contact Us
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Book Consultation Section */}
       <section className="py-16 lg:py-24">
         <div className="container px-4">
@@ -224,7 +264,7 @@ const Home = () => {
               <CardContent>
                 <div className="space-y-2">
                   <p className="font-semibold">+60 11-1437 1926</p>
-                  <p className="font-semibold">+60 182848310</p>
+                  <p className="font-semibold">+60 18-284 8310</p>
                   <p className="text-sm text-muted-foreground">(We reply within 24 hours)</p>
                 </div>
               </CardContent>
