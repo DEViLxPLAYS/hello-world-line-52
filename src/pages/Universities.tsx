@@ -121,11 +121,11 @@ const Universities = () => {
 
   return (
     <div className="min-h-screen py-8">
-      <div className="container px-4">
+      <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Explore Universities</h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Explore Universities</h1>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Discover world-class universities from around the globe. Find the perfect institution for your academic journey.
           </p>
         </div>
@@ -183,26 +183,26 @@ const Universities = () => {
         </div>
 
         {/* Universities Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredUniversities.map((university) => (
             <Card key={university.id} className="hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center space-x-3">
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
                     <img 
                       src={university.image} 
                       alt={`${university.name} logo`}
-                      className="w-12 h-12 rounded-lg object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg object-cover flex-shrink-0"
                     />
-                    <div>
-                      <CardTitle className="text-lg">{university.name}</CardTitle>
+                    <div className="min-w-0">
+                      <CardTitle className="text-base sm:text-lg truncate">{university.name}</CardTitle>
                       <div className="flex items-center space-x-1 text-muted-foreground">
-                        <MapPin className="h-4 w-4" />
-                        <span className="text-sm">{university.location}</span>
+                        <MapPin className="h-3 w-3 sm:h-4 sm:w-4 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm truncate">{university.location}</span>
                       </div>
                     </div>
                   </div>
-                  <Badge variant="secondary">#{university.ranking}</Badge>
+                  <Badge variant="secondary" className="flex-shrink-0">#{university.ranking}</Badge>
                 </div>
               </CardHeader>
               <CardContent>

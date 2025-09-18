@@ -3,16 +3,16 @@ import { GraduationCap, Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-300">
-      <div className="container px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-slate-300 overflow-hidden">
+      <div className="container px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <GraduationCap className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-white">Future Ace Consultancy</span>
+              <GraduationCap className="h-6 w-6 sm:h-8 sm:w-8 text-primary flex-shrink-0" />
+              <span className="text-lg sm:text-xl font-bold text-white">Future Ace Consultancy</span>
             </Link>
-            <p className="text-sm leading-relaxed">
+            <p className="text-xs sm:text-sm leading-relaxed">
               Your trusted partner for studying abroad in Malaysia and Russia. We help students achieve their dreams of international education with expert guidance and personalized support.
             </p>
           </div>
@@ -72,15 +72,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-slate-400">
+        <div className="border-t border-slate-800 mt-6 sm:mt-8 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-xs sm:text-sm text-slate-400 text-center sm:text-left">
             © 2024 Future Ace Consultancy. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-sm text-slate-400 hover:text-primary transition-colors">
+          <div className="flex space-x-4 sm:space-x-6">
+            <Link to="/privacy" className="text-xs sm:text-sm text-slate-400 hover:text-primary transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-sm text-slate-400 hover:text-primary transition-colors">
+            <Link to="/terms" className="text-xs sm:text-sm text-slate-400 hover:text-primary transition-colors">
               Terms of Service
             </Link>
           </div>

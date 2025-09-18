@@ -113,9 +113,36 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
+  }
+  
+  html {
+    overflow-x: hidden;
   }
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+    width: 100%;
+    min-width: 0;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  #root {
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 0;
+  }
+  
+  /* Ensure all containers respect viewport */
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Fix image responsiveness */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -147,13 +147,13 @@ const Blog = () => {
         </div>
 
         {/* Featured Post */}
-        <Card className="border-none shadow-lg mb-12 overflow-hidden">
+        <Card className="border-none shadow-lg mb-8 sm:mb-12 overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="bg-white flex items-center justify-center p-0">
+            <div className="bg-white flex items-center justify-center p-4 sm:p-8 lg:p-0">
               <img 
                 src={malaysiaGuideHero}
                 alt="Complete Guide to Studying in Malaysia" 
-                className="w-1/2 h-auto object-cover mx-auto"
+                className="w-full sm:w-3/4 lg:w-1/2 h-auto object-cover mx-auto"
               />
             </div>
             <div className="p-8">

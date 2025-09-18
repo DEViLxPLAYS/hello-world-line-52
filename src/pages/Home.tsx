@@ -64,28 +64,28 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-hero text-white py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-gradient-hero text-white py-16 sm:py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         ></div>
-        <div className="relative container px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <div className="relative container px-4 sm:px-6 lg:px-8 text-center max-w-7xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight break-words">
             Your Gateway to
-            <span className="text-accent"> Global Education</span>
+            <span className="text-accent block sm:inline"> Global Education</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             Expert guidance for studying abroad. We help students achieve their dreams with personalized consultation and comprehensive support.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-lg border-2 border-blue-600" asChild>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+            <Button size="lg" className="w-full sm:w-auto bg-blue-600 text-white hover:bg-blue-700 font-semibold shadow-lg border-2 border-blue-600" asChild>
               <Link to="/universities">
                 <BookOpen className="mr-2 h-5 w-5" />
                 Explore Universities
               </Link>
             </Button>
-            <Button size="lg" className="bg-blue-500 text-white hover:bg-blue-600 font-semibold border-2 border-blue-500" asChild>
+            <Button size="lg" className="w-full sm:w-auto bg-blue-500 text-white hover:bg-blue-600 font-semibold border-2 border-blue-500" asChild>
               <Link to="/consultation">
                 Book Free Consultation
               </Link>
@@ -95,25 +95,25 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 lg:py-24 bg-gradient-card">
-        <div className="container px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose FutureAceConsultancy?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-card">
+        <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Why Choose FutureAceConsultancy?</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               We provide comprehensive support to make your study abroad journey smooth and successful.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="text-center border-none shadow-lg hover:shadow-xl transition-shadow">
                 <CardHeader>
                   <div className="mx-auto mb-4">
                     {feature.icon}
                   </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg sm:text-xl">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-sm sm:text-base">
                     {feature.description}
                   </CardDescription>
                 </CardContent>
@@ -145,26 +145,26 @@ const Home = () => {
               Discover world-class universities in top study destinations
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {popularDestinations.map((destination, index) => (
               <Link key={index} to={destination.country === "Malaysia" ? "/universities" : "/universities"}>
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer">
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-3">
-                        <span className="text-3xl">{destination.flag}</span>
-                        <h3 className="text-lg font-semibold">{destination.country}</h3>
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-center justify-between mb-3 sm:mb-4">
+                      <div className="flex items-center space-x-2 sm:space-x-3">
+                        <span className="text-2xl sm:text-3xl">{destination.flag}</span>
+                        <h3 className="text-base sm:text-lg font-semibold">{destination.country}</h3>
                       </div>
-                      <ArrowRight className="h-5 w-5 text-muted-foreground" />
+                      <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1 sm:space-y-2">
                       <div className="flex items-center space-x-2">
-                        <MapPin className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-muted-foreground">{destination.universities} Universities</span>
+                        <MapPin className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
+                        <span className="text-sm sm:text-base text-muted-foreground">{destination.universities} Universities</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <BookOpen className="h-4 w-4 text-muted-foreground" />
-                        <span className="text-muted-foreground">{destination.programs}</span>
+                        <BookOpen className="h-3 w-3 sm:h-4 sm:w-4 text-muted-foreground flex-shrink-0" />
+                        <span className="text-sm sm:text-base text-muted-foreground">{destination.programs}</span>
                       </div>
                     </div>
                   </CardContent>
@@ -207,21 +207,21 @@ const Home = () => {
       </section>
 
       {/* Ready to Start Your Journey Section */}
-      <section className="py-16 lg:py-24 bg-blue-500 text-white">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Journey?</h2>
-            <p className="text-xl max-w-2xl mx-auto mb-8">
+      <section className="py-12 sm:py-16 lg:py-24 bg-blue-500 text-white">
+        <div className="container px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Ready to Start Your Journey?</h2>
+            <p className="text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-6 sm:mb-8 px-4">
               Join thousands of students who have achieved their academic dreams with our expert guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-500 hover:bg-gray-100 font-semibold shadow-lg border-2 border-white" asChild>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
+              <Button size="lg" className="w-full sm:w-auto bg-white text-blue-500 hover:bg-gray-100 font-semibold shadow-lg border-2 border-white" asChild>
                 <Link to="/consultation">
                   <Calendar className="mr-2 h-5 w-5" />
                   Book Free Consultation
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-500 font-semibold" asChild>
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-blue-500 font-semibold" asChild>
                 <Link to="/contact">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Contact Us
@@ -254,35 +254,35 @@ const Home = () => {
               Get in touch with us for immediate assistance
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <Card className="text-center border-none shadow-lg">
-              <CardHeader>
-                <div className="mx-auto mb-4">
-                  <span className="text-4xl">📞</span>
+              <CardHeader className="pb-3 sm:pb-4">
+                <div className="mx-auto mb-3 sm:mb-4">
+                  <span className="text-3xl sm:text-4xl">📞</span>
                 </div>
-                <CardTitle className="text-lg">Phone Numbers</CardTitle>
+                <CardTitle className="text-base sm:text-lg">Phone Numbers</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <p className="font-semibold">+60 11-1437 1926</p>
-                  <p className="font-semibold">+60 18-284 8310</p>
-                  <p className="text-sm text-muted-foreground">(We reply within 24 hours)</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <p className="text-sm sm:text-base font-semibold break-all">+60 11-1437 1926</p>
+                  <p className="text-sm sm:text-base font-semibold break-all">+60 18-284 8310</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">(We reply within 24 hours)</p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="text-center border-none shadow-lg">
-              <CardHeader>
-                <div className="mx-auto mb-4">
-                  <span className="text-4xl">📧</span>
+              <CardHeader className="pb-3 sm:pb-4">
+                <div className="mx-auto mb-3 sm:mb-4">
+                  <span className="text-3xl sm:text-4xl">📧</span>
                 </div>
-                <CardTitle className="text-lg">Emails</CardTitle>
+                <CardTitle className="text-base sm:text-lg">Emails</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <p className="text-sm">fa.consultancy2020@gmail.com</p>
-                  <p className="text-sm">asadkhanbaloch111@gmail.com</p>
-                  <p className="text-sm text-muted-foreground">(We reply within 24 hours)</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <p className="text-xs sm:text-sm break-all">fa.consultancy2020@gmail.com</p>
+                  <p className="text-xs sm:text-sm break-all">asadkhanbaloch111@gmail.com</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">(We reply within 24 hours)</p>
                 </div>
               </CardContent>
             </Card>
